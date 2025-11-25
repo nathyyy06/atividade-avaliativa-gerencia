@@ -70,3 +70,6 @@ app.get("/meunome", (req, res) => {
   res.send("Meu nome é Nathalia Teixeira da Cruz");
 });
 
+app.get("/tico", (req, res) => {
+  res.send("teco");
+});
