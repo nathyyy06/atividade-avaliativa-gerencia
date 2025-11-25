@@ -65,6 +65,10 @@ const html = `
   </body>
 </html>
 `
+const express = require("express");
+const app = express();
+
+app.use(express.json());
 
 app.get("/meunome", (req, res) => {
   res.send("Meu nome é Nathalia Teixeira da Cruz");
@@ -89,4 +93,18 @@ app.get("/pokemons", (req, res) => {
   ];
 
   res.json(pokemonsAsh);
+});
+
+app.post("/series", (req, res) => {
+  const series = [
+    "The Vampire Diaries",
+    "Stranger Things",
+    "Peaky Blinders"
+  ];
+
+  res.json(series);
+});
+
+app.listen(3000, () => {
+  console.log("Servidor rodando na porta 3000");
 });
