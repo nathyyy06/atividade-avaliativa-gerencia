@@ -65,3 +65,8 @@ const html = `
   </body>
 </html>
 `
+
+app.get("/meunome", (req, res) => {
+  res.send("Meu nome é Nathalia Teixeira da Cruz");
+});
+
